@@ -10,4 +10,3 @@ print("Hello")
 print("Hello Ane")
 
 print("ai ama")
-print("aix")
