@@ -1,0 +1,28 @@
+---
+title: "Mi informe"
+author: "Ane"
+format: typst
+---
+
+# Mi informe del dataset Nigro et al.
+
+```{r}
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+library(tidyverse)
+library(here)
+```
+
+```{r}
+#| message: FALSE
+#| warning: FALSE
+dt<-read_csv(here("data/data_clean.csv"))
+```
+
+La media de frutos general es `r mean(dt$count, na.rm=TRUE)`.
+```{r}
+#| fig-cap: "Figura 1: plot"
+ggplot(dt, aes(y=count, x=year, colour = site ))+
+  geom_point()
+```
